@@ -1,0 +1,26 @@
+diagnosis_id,icd_code,diagnosis_name,category
+1,B54,Malaria,Communicable
+2,J06.9,Upper Respiratory Infection,Communicable
+3,E11,Type 2 Diabetes,Non-Communicable
+4,I10,Essential Hypertension,Non-Communicable
+5,J45,Asthma,Non-Communicable
+6,A09,Gastroenteritis,Communicable
+7,N39.0,Urinary Tract Infection,Communicable
+8,O26,Antenatal Care,Maternal Health
+9,Z39,Postnatal Care,Maternal Health
+10,K02,Dental Caries,Dental
+11,H10,Conjunctivitis,Eye
+12,H66,Otitis Media,ENT
+13,A15,Tuberculosis,Communicable
+14,L08,Skin Infection,Dermatology
+15,K27,Peptic Ulcer Disease,Gastrointestinal
+16,M79.7,Musculoskeletal Pain,Musculoskeletal
+17,G40,Epilepsy,Neurology
+18,F41,Anxiety Disorder,Mental Health
+19,E44,Protein-Energy Malnutrition,Nutrition
+20,J30,Allergic Rhinitis,ENT
+21,A01,Typhoid Fever,Communicable
+22,S00,Soft Tissue Injury,Injury
+23,T30,Burn Injury,Injury
+24,R51,Headache,General Medicine
+25,M54,Low Back Pain,Musculoskeletal

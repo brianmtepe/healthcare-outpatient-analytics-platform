@@ -1,0 +1,41 @@
+provider_id,provider_name,cadre,department_id,department_name,years_experience,employment_type,provider_status
+1,Allison Hill,Medical Officer,1,General OPD,1,Permanent,On Leave
+2,Noah Rhodes,Nurse,1,General OPD,8,Permanent,Active
+3,Angie Henderson,Clinical Officer,1,General OPD,5,Permanent,Active
+4,Daniel Wagner,Medical Officer,1,General OPD,22,Permanent,Active
+5,Cristian Santos,Medical Officer,1,General OPD,19,Permanent,Active
+6,Connie Lawrence,Consultant,1,General OPD,2,Permanent,On Leave
+7,Abigail Shaffer,Medical Officer,2,Pediatrics,7,Contract,Active
+8,Gina Moore,Clinical Officer,2,Pediatrics,17,Permanent,Active
+9,Gabrielle Davis,Medical Officer,2,Pediatrics,18,Permanent,Active
+10,Ryan Munoz,Clinical Officer,2,Pediatrics,23,Permanent,Active
+11,Monica Herrera,Consultant,3,Maternal & Child Health,8,Permanent,Active
+12,Jamie Arnold,Consultant,3,Maternal & Child Health,19,Permanent,Active
+13,Lisa Hensley,Nurse,3,Maternal & Child Health,26,Permanent,Active
+14,Michele Williams,Medical Officer,3,Maternal & Child Health,25,Permanent,Active
+15,Dylan Miller,Clinical Officer,3,Maternal & Child Health,23,Permanent,Active
+16,Brian Ramirez,Consultant,3,Maternal & Child Health,11,Permanent,Active
+17,Holly Wood,Clinical Officer,4,Dental,7,Permanent,Active
+18,Derek Zuniga,Nurse,4,Dental,4,Contract,Active
+19,Lisa Jackson,Medical Officer,4,Dental,13,Permanent,Active
+20,Carla Gray,Medical Officer,4,Dental,12,Permanent,Active
+21,Margaret Hawkins DDS,Nurse,4,Dental,20,Permanent,Active
+22,Patty Perez,Medical Officer,5,Eye Clinic,24,Permanent,Active
+23,Ethan Adams,Consultant,5,Eye Clinic,18,Permanent,Active
+24,Tommy Walter,Medical Officer,5,Eye Clinic,30,Permanent,Active
+25,Matthew Foster,Consultant,5,Eye Clinic,3,Permanent,Active
+26,Judy Baker,Nurse,5,Eye Clinic,27,Contract,Active
+27,Justin Baker,Nurse,6,ENT,19,Contract,Active
+28,Stephanie Ross,Clinical Officer,6,ENT,23,Permanent,Active
+29,Zachary Hicks,Medical Officer,6,ENT,2,Permanent,Active
+30,Anthony Rodriguez,Clinical Officer,6,ENT,25,Permanent,Active
+31,Rebecca Henderson,Nurse,6,ENT,3,Permanent,Active
+32,James Ferrell,Clinical Officer,6,ENT,28,Contract,Active
+33,Tricia Valencia,Consultant,7,Diabetes Clinic,9,Permanent,Active
+34,Nathan Maldonado,Consultant,7,Diabetes Clinic,21,Permanent,Active
+35,Debra Davidson,Nurse,7,Diabetes Clinic,6,Permanent,On Leave
+36,Jeffrey Chavez,Nurse,7,Diabetes Clinic,12,Permanent,Active
+37,Sherri Baker,Nurse,8,HIV Clinic,23,Permanent,Active
+38,Cassandra Gaines,Medical Officer,8,HIV Clinic,20,Permanent,Active
+39,Elizabeth Fowler,Clinical Officer,8,HIV Clinic,18,Permanent,Active
+40,Brittany Farmer,Clinical Officer,8,HIV Clinic,6,Permanent,Active
