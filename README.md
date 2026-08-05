@@ -59,7 +59,7 @@ Each page targets a specific decision-maker and answers a real operational, clin
 ### **2. Clinical Operations**
 **Audience:** Nursing & operations managers | **Answers:** Which departments have the longest waits and heaviest consultation load.
 
-![Clinical Operations Dashboard](Images/Clinical_Operations.jpeg)
+![Clinical Operations Dashboard](Images/CLinical_Operations.jpeg)
 
 ---
 
