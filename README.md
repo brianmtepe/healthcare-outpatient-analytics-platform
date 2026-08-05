@@ -1,347 +1,127 @@
 # 🏥 Healthcare Outpatient Operations & Performance Intelligence Platform
 
-### Healthcare Data Analytics | SQL | Python | Pandas | MySQL | Power BI | Monitoring & Evaluation
+**Healthcare Data Analytics | Python · Pandas · MySQL · SQL · Power BI**
 
----
+## **Overview**
 
-## 📌 Project Overview
+Hospitals generate thousands of outpatient records daily, but this data rarely reaches decision-makers in a usable form. This project builds a complete pipeline — from synthetic data generation through to an interactive Power BI report — that turns raw outpatient records into decisions hospital managers, clinical leads, finance teams, and M&E officers can act on immediately.
 
-Healthcare facilities generate thousands of outpatient records every day, yet much of this operational data remains underutilized for evidence-based decision-making.
+## **Pipeline**
 
-This project demonstrates a complete end-to-end healthcare analytics pipeline that transforms raw outpatient healthcare data into actionable operational intelligence using **Python, Pandas, MySQL, SQL, and Power BI**.
-
-Designed as a real-world healthcare analytics solution, the platform enables healthcare managers, Monitoring & Evaluation teams, hospital administrators, NGOs, and digital health organizations to monitor outpatient operations, provider productivity, disease burden, financial sustainability, and quality improvement through interactive dashboards.
-
----
-
-# 📊 Healthcare Analytics Pipeline
-
-```text
+```
 Synthetic Healthcare Data
-          │
-          ▼
-Python Data Generation
-          │
-          ▼
-Pandas ETL & Data Validation
-          │
-          ▼
+        ↓
+Python Data Generation (Faker)
+        ↓
+Pandas Cleaning & Validation
+        ↓
 MySQL Relational Database
-          │
-          ▼
-SQL Analytics & Views
-          │
-          ▼
-Power BI Interactive Dashboards
-          │
-          ▼
-Healthcare Decision Support
+        ↓
+SQL Analytics Views
+        ↓
+Power BI Interactive Dashboard
 ```
 
----
+## **Tech Stack**
+| Tool | Role |
+|---|---|
+| **Python + Faker** | Synthetic outpatient data generation |
+| **Pandas** | Cleaning, ETL, feature engineering |
+| **MySQL** | Relational storage |
+| **SQL Views** | Aggregate functions, GROUP BY, CASE statements — the analytics layer feeding Power BI |
+| **Power BI** | 6-page interactive dashboard, DAX measures, conditional formatting |
 
-# 🛠 Technologies Used
+## **Dataset**
+- 20,000 outpatient visits · 3,000 patients · 40 providers · 8 departments · 25 diagnosis categories
+- 3 reporting years (2024–2026)
+- Fields: demographics, department, provider, diagnosis, visit date, waiting time, consultation time, revenue
 
-| Technology | Purpose |
-|------------|---------|
-| Python | Synthetic Healthcare Data Generation |
-| Pandas | Data Cleaning & ETL |
-| Faker | Realistic Healthcare Dataset Generation |
-| MySQL | Relational Database |
-| SQL | Healthcare Analytics |
-| Power BI | Interactive Dashboard Development |
-| Git & GitHub | Version Control |
-
----
-
-# 📂 Dataset Summary
-
-The project contains a realistic synthetic outpatient dataset comprising:
-
-- ✅ 20,000 Outpatient Visits
-- ✅ 3,000 Patients
-- ✅ 40 Healthcare Providers
-- ✅ 8 Clinical Departments
-- ✅ 25 Diagnosis Categories
-- ✅ Three Reporting Years (2024–2026)
-
-The dataset includes:
-
-- Patient demographics
-- Department
-- Provider
-- Diagnosis
-- Visit dates
-- Waiting time
-- Consultation time
-- Revenue
-- Follow-up status
-- Appointment outcomes
+## **Business Questions This Answers**
+- Which departments have the highest patient volume and longest waits?
+- Which providers carry the heaviest workload?
+- Which diagnoses drive the most outpatient burden?
+- Which departments generate the most revenue, and at what average bill?
+- Which departments are missing service-quality targets and need intervention?
 
 ---
 
-# 🎯 Business Problems Solved
+## 📸 **Dashboard Pages**
 
-Healthcare managers frequently need answers to questions such as:
+Each page targets a specific decision-maker and answers a real operational, clinical, or financial question.
 
-- Which departments experience the highest patient volumes?
-- Which providers have the greatest workload?
-- Which diseases contribute most to outpatient burden?
-- Are waiting times improving?
-- Which departments generate the highest revenue?
-- Where should additional healthcare staff be deployed?
-- Which quality indicators require immediate intervention?
-- How can operational efficiency be improved?
+### **1. Executive Overview**
+**Audience:** Hospital leadership | **Answers:** Overall performance at a glance — visits, revenue, waiting time, and monthly trends.
+
+![Executive Overview Dashboard](Images/Executive_Overview.jpeg)
 
 ---
 
-# 🎯 Project Objectives
+### **2. Clinical Operations**
+**Audience:** Nursing & operations managers | **Answers:** Which departments have the longest waits and heaviest consultation load.
 
-- Monitor outpatient service utilization
-- Evaluate provider performance
-- Identify disease burden
-- Improve patient flow
-- Reduce waiting times
-- Support staffing decisions
-- Monitor financial sustainability
-- Improve healthcare quality
-- Produce reusable Power BI dashboards
+![Clinical Operations Dashboard](Images/Clinical_Operations.jpeg)
 
 ---
 
-# 📸 Dashboard Showcase
+### **3. Provider Performance**
+**Audience:** Nursing management, HR | **Answers:** Workload distribution, productivity, and top revenue-generating providers.
+
+![Provider Performance Dashboard](Images/Provider_Performance.jpeg)
 
 ---
 
-# 1️⃣ Executive Overview Dashboard
+### **4. Disease Surveillance**
+**Audience:** Clinical directors, public health officers | **Answers:** Which diagnoses dominate outpatient care and how they trend month to month.
 
-Provides a high-level summary of outpatient operational performance.
-
-### Key Insights
-
-- Total Visits
-- Unique Patients
-- Total Revenue
-- Average Waiting Time
-- Average Consultation Time
-- Monthly Service Utilization
-
-<img src="Images/Executive_Overview.jpeg" width="100%">
+![Disease Surveillance Dashboard](Images/Disease_Surveillance.jpeg)
 
 ---
 
-# 2️⃣ Clinical Operations Dashboard
+### **5. Financial Analytics**
+**Audience:** Finance managers | **Answers:** Revenue generation, average bill, and department-level financial performance.
 
-Monitors day-to-day outpatient clinical operations.
-
-### Key Insights
-
-- Department Workload
-- Patient Age Distribution
-- Gender Distribution
-- Monthly Visit Trends
-- Peak Service Periods
-
-<img src="Images/Clinical_Operations.jpeg" width="100%">
+![Financial Performance Dashboard](Images/Financial_Performance.jpeg)
 
 ---
 
-# 3️⃣ Provider Performance Dashboard
+### **6. Quality Improvement**
+**Audience:** Quality improvement committee | **Answers:** Which departments are meeting or missing the 30-minute waiting-time service target.
 
-Evaluates healthcare provider productivity and workload.
-
-### Key Insights
-
-- Provider Workload
-- Total Visits
-- Average Daily Workload
-- Provider Comparison
-- Performance Monitoring
-
-<img src="Images/Provider_Performance.jpeg" width="100%">
+![Quality Improvement Dashboard](Images/Quality_Improvement.jpeg)
 
 ---
 
-# 4️⃣ Disease Surveillance Dashboard
+## **SQL Views Powering the Dashboard**
+`vw_executive_summary` · `vw_monthly_trends` · `vw_department_performance` · `vw_provider_workload` · `vw_diagnosis_trends` · `vw_department_revenue` · `vw_waiting_time`
 
-Supports disease monitoring and epidemiological surveillance.
+Built using aggregate functions, GROUP BY, and CASE-based categorization for waiting-time bands and service-target flags.
 
-### Key Insights
-
-- Top Diagnoses
-- Disease Burden Distribution
-- Monthly Disease Trends
-- Diagnosis Comparison
-- Public Health Monitoring
-
-<img src="Images/Disease_Surveillance.jpeg" width="100%">
-
----
-
-# 5️⃣ Financial Performance Dashboard
-
-Monitors healthcare revenue generation and sustainability.
-
-### Key Insights
-
-- Total Revenue
-- Average Bill
-- Department Revenue
-- Monthly Revenue Trends
-- Financial Performance Comparison
-
-<img src="Images/Financial_Performance.jpeg" width="100%">
-
----
-
-# 6️⃣ Quality Improvement Dashboard
-
-Monitors operational quality indicators across departments.
-
-### Key Insights
-
-- Average Waiting Time
-- Consultation Time
-- Longest Waiting Time
-- Department Quality Scorecard
-- Service Performance Monitoring
-
-<img src="Images/Quality_Improvement.jpeg" width="100%">
-
----
-
-# 📈 Monitoring & Evaluation Indicators
-
-This project aligns with routine healthcare Monitoring & Evaluation reporting through indicators including:
-
-- Total Outpatient Visits
-- Monthly Service Utilization
-- Follow-up Rate
-- Average Waiting Time
-- Average Consultation Time
-- Department Performance
-- Provider Productivity
-- Disease Burden
-- Revenue Generation
-- Quality Improvement Metrics
-
----
-
-# 🗄 SQL Analytics
-
-The dashboard is powered by SQL Views including:
-
-- Executive Summary
-- Monthly Trends
-- Department Performance
-- Provider Workload
-- Disease Trends
-- Department Revenue
-- Waiting Time Analysis
-
-SQL techniques demonstrated include:
-
-- Aggregate Functions
-- GROUP BY
-- CASE Statements
-- Window Functions
-- Analytical Views
-- Performance Optimization
-
----
-
-# 📁 Repository Structure
-
-```text
+## **Repository Structure**
+```
 healthcare-outpatient-analytics-platform/
-
-│
-├── Data/
-│   ├── raw/
-│   ├── processed/
-│   └── validated/
-│
-├── Images/
-│   ├── Executive_Overview.jpeg
-│   ├── Clinical_Operations.jpeg
-│   ├── Provider_Performance.jpeg
-│   ├── Disease_Surveillance.jpeg
-│   ├── Financial_Performance.jpeg
-│   └── Quality_Improvement.jpeg
-│
-├── Notebooks/
-│
-├── SQL/
-│
-├── PowerBI/
-│
-├── README.md
+├── Data/               # raw, processed, validated CSVs
+├── Notebooks/          # 01_data_generation → 05_generate_sql_inserts
+├── SQL_queries/        # database setup, load, views, validation
+├── PowerBI/             # .pbix and .pbit dashboard files
+├── Images/              # dashboard screenshots
 ├── requirements.txt
-└── LICENSE
+└── README.md
 ```
 
----
+## **Known Limitations (v2 Roadmap)**
+- Diagnosis Trends view does not yet separate chronic vs. acute conditions.
+- Provider Workload view lacks a department join, limiting cross-page filtering.
+- Provider-level revenue is visit-count based; a true per-visit revenue join is planned.
 
-# 🌍 Healthcare Impact
+## **Related Projects**
+- **Hospital Readmission Risk Analytics** — readmission rate, length-of-stay, and financial exposure analysis
+- **Maternal & Child Health Kenya Dashboard** — county-level maternal and child health indicators
+- **Upcoming:** DHIS2 Facility Operations Intelligence Platform · React-based Healthcare Intelligence Platform
 
-This platform demonstrates how routinely collected outpatient healthcare data can be transformed into actionable intelligence for:
-
-- Hospitals
-- Primary Healthcare Facilities
-- County Health Departments
-- Ministry of Health
-- NGOs
-- Monitoring & Evaluation Teams
-- Digital Health Organizations
-- Health Informatics Departments
-
----
-
-# 🚀 Related Healthcare Analytics Projects
-
-This project forms part of my Healthcare Analytics Portfolio.
-
-## 🏥 Hospital Readmission Risk Analytics
-
-- Readmission Rate Analysis
-- Length of Stay Analytics
-- Financial Exposure Assessment
-- Readmission Trends
+## **Author**
+**Brian Mtepe** — Registered Community Health Nurse (KRCHN) | Healthcare Data Analyst
+Python · SQL · Pandas · Power BI
+[GitHub](https://github.com/brianmtepe) · [LinkedIn](https://www.linkedin.com/in/brianmtepe-healthdata)
 
 ---
-
-## 👩‍👦 Maternal & Child Health Analytics
-
-- Maternal Health Indicators
-- Child Health Monitoring
-- County Performance Analysis
-- Public Health Dashboards
-
----
-
-## 🔜 Upcoming Projects
-
-- DHIS2 Facility Operations & Pharmaceutical Intelligence Platform
-- Healthcare Intelligence Platform (React + FastAPI)
-- Digital Health Decision Support System
-
----
-
-# 👨‍💻 Author
-
-## Brian Mtepe 
-
-**Registered Community Health Nurse (KRCHN)**
-
-Healthcare Data Analyst | Health Informatics | Monitoring & Evaluation | Digital Health
-
-### Connect With Me
-
-- GitHub: https://github.com/brianmtepe
-- LinkedIn: *(https://www.linkedin.com/in/brianmtepe-healthdata)*
-
----
-
-## ⭐ If you found this project valuable, consider giving it a Star!
-
-This repository demonstrates an end-to-end healthcare analytics workflow—from synthetic healthcare data generation and SQL analytics to interactive Power BI dashboards—designed to support evidence-based decision-making in healthcare.
+⭐ If this project is useful to you, consider starring the repo.
